@@ -46,7 +46,7 @@ ciphertext: Negh zf av huf pcfx bt gzrwep oz
 
 ## Week 2:  
 
-[**bday.txt**]  
+### [**bday.txt**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/bday.txt)  
 In bday.txt, type the ASCII representation of Happy Birthday, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:
 
 ```javascript
@@ -57,7 +57,7 @@ D4@1/4
 G4@1/4
 F#4@1/2
 ```
-[**helpers.c**]  
+### [**helpers.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/helpers.c)  
 In this file, are declarations for three functions:
 
 **duration**  
