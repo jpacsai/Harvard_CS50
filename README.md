@@ -44,4 +44,31 @@ plaintext:  Meet me at the park at eleven am
 ciphertext: Negh zf av huf pcfx bt gzrwep oz
 ```
 
-## Week 2: 
+## Week 2:  
+
+[**bday.txt**]  
+In bday.txt, type the ASCII representation of Happy Birthday, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:
+
+```javascript
+D4@1/8
+D4@1/8
+E4@1/4
+D4@1/4
+G4@1/4
+F#4@1/2
+```
+[**helpers.c**]  
+In this file, are declarations for three functions:
+
+**duration**  
+which should take as input as a string a fraction (e.g., 1/4) and return as an int a corresponding number of eigths (2, in this case, since 1/4 is equivalent to 2/8);
+
+**frequency**  
+which should take as input as a string a note formatted as
+XY (e.g., A4), where X is any of A through G and Y is any of 0 through 8, or
+XYZ (e.g., A#4), where X is any of A through G, Y is # or b, and Z is any of 0 through 8,
+and return as an int the note’s corresponding frequency, rounded to the nearest integer; and
+
+**is_rest**  
+which should return true if its input, a string, represents a rest in our machine-readable format, otherwise false.
+
