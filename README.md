@@ -58,7 +58,7 @@ G4@1/4
 F#4@1/2
 ```
 ### [**helpers.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/helpers.c)  
-In this file, are declarations for three functions:
+In this file, there are three functions:
 
 **duration**  
 which should take as input as a string a fraction (e.g., 1/4) and return as an int a corresponding number of eigths (2, in this case, since 1/4 is equivalent to 2/8);
