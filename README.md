@@ -44,7 +44,7 @@ plaintext:  Meet me at the park at eleven am
 ciphertext: Negh zf av huf pcfx bt gzrwep oz
 ```
 
-## Week 2:  
+## Week 2: Algorithms  
 
 ### [**bday.txt**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/bday.txt)  
 In bday.txt, type the ASCII representation of Happy Birthday, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:
