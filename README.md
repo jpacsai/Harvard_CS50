@@ -44,9 +44,9 @@ plaintext:  Meet me at the park at eleven am
 ciphertext: Negh zf av huf pcfx bt gzrwep oz
 ```
 
-## Week 2:  
+## Week 2: Algorithms  
 
-[**bday.txt**]  
+### [**bday.txt**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/bday.txt)  
 In bday.txt, type the ASCII representation of Happy Birthday, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:
 
 ```javascript
@@ -57,8 +57,8 @@ D4@1/4
 G4@1/4
 F#4@1/2
 ```
-[**helpers.c**]  
-In this file, are declarations for three functions:
+### [**helpers.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/helpers.c)  
+In this file, there are three functions:
 
 **duration**  
 which should take as input as a string a fraction (e.g., 1/4) and return as an int a corresponding number of eigths (2, in this case, since 1/4 is equivalent to 2/8);
