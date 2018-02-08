@@ -2,15 +2,15 @@
 
 ## What's `stdint.h`?
 
-TODO
+a c library that defines a set of integral types
 
 ## What's the point of using `uint8_t`, `uint32_t`, `int32_t`, and `uint16_t` in a program?
 
-TODO
+these are unsigned char, unsigned short, unsigned int and unsigned long long. using the smallest we need to save memory
 
 ## How many bytes is a `BYTE`, a `DWORD`, a `LONG`, and a `WORD`, respectively?
 
-TODO
+1, 
 
 ## What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats (with high probability) are generally called "magic numbers."
 
