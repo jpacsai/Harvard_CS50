@@ -72,3 +72,5 @@ and return as an int the note’s corresponding frequency, rounded to the neares
 **is_rest**  
 which should return true if its input, a string, represents a rest in our machine-readable format, otherwise false.
 
+
+## Week 3: Memory
