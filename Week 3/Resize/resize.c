@@ -4,37 +4,39 @@
 
 #include "bmp.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     // ensure proper usage
-    if (argc != 3)
+    if (argc != 4)
     {
-        fprintf(stderr, "Usage: copy infile outfile\n");
+        printf("Usage: resize scale infile outfile\n");
+        return 1;
+    }
+
+    // catch scale
+    int scale = atoi(argv[1]);
+
+    // prompt the user to enter right scale value
+    if(scale > 100 || scale < 1)
+    {
+        printf("Please enter an integer between 1 and 100\n");
         return 1;
     }
 
     // remember filenames
-    char *infile = argv[1];
-    char *outfile = argv[2];
-
-    // remember scale
-    int scale = atoi(argv[1]);
-    if (scale < 1 || scale > 100)
-    {
-        printf("Please enter an integer between 1 and 100");
-        return 1;
-    }
+    char* infile = argv[2];
+    char* outfile = argv[3];
 
     // open input file
-    FILE *inptr = fopen(infile, "r");
+    FILE* inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
-        fprintf(stderr, "Could not open %s.\n", infile);
+        printf("Could not open %s.\n", infile);
         return 2;
     }
 
     // open output file
-    FILE *outptr = fopen(outfile, "w");
+    FILE* outptr = fopen(outfile, "w");
     if (outptr == NULL)
     {
         fclose(inptr);
@@ -60,13 +62,22 @@ int main(int argc, char *argv[])
         return 4;
     }
 
-    // variables for original width and height
+    // original width and height
     int originalW = bi.biWidth;
     int originalH = bi.biHeight;
 
-    // new size
+    // update width and height
     bi.biWidth *= scale;
     bi.biHeight *= scale;
+
+    // determine padding for scanlines
+    int originalP =  (4 - (originalW * sizeof(RGBTRIPLE)) % 4) % 4;
+    int padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
+
+    // update image size
+    bi.biSizeImage = abs(bi.biHeight) * ((bi.biWidth * sizeof (RGBTRIPLE)) + padding);
+
+    // update file size
     bf.bfSize = bi.biSizeImage + sizeof (BITMAPFILEHEADER) + sizeof (BITMAPINFOHEADER);
 
     // write outfile's BITMAPFILEHEADER
@@ -75,13 +86,8 @@ int main(int argc, char *argv[])
     // write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
-    // determine padding for scanlines
-    int originalPadding =  (4 - (originalW * sizeof(RGBTRIPLE)) % 4) % 4;
-    int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
-
-    // buffer
+    // buffer storage
     RGBTRIPLE *buffer = malloc(sizeof(RGBTRIPLE) * (bi.biWidth));
-
 
     // iterate over infile's scanlines
     for (int i = 0, biHeight = abs(originalH); i < biHeight; i++)
@@ -96,42 +102,34 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-            // pixel to buffer
-            for (int times = 0; times < scale; times++)
+            // pixels to buffer
+            for(int t = 0; t < scale; t++)
             {
-                *(buffer + counter) = triple;
+                *(buffer+(counter)) = triple;
                 counter++;
             }
-
-            // write RGB triple to outfile
-            for (int rgb = 0; rgb < scale; rgb++)
-            {
-                fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
-            }
-
-
-
         }
 
         // skip over padding, if any
-        fseek(inptr, originalPadding, SEEK_CUR);
+        fseek(inptr, originalP, SEEK_CUR);
 
-        // then add it back (to demonstrate how)
-        for (int k = 0; k < padding; k++)
-        {
-            fputc(0x00, outptr);
-        }
+        // write RGB triple to outfile
+           for(int rgb = 0; rgb < scale; rgb++)
+           {
+                fwrite((buffer), sizeof(RGBTRIPLE), bi.biWidth, outptr);
+
+                // write padding to outfile
+                for (int k = 0; k < padding; k++)
+                    fputc(0x00, outptr);
+           }
     }
 
-    // clear memory
+
     free(buffer);
 
-    // close infile
     fclose(inptr);
 
-    // close outfile
     fclose(outptr);
 
-    // success
     return 0;
 }
