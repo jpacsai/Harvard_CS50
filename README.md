@@ -1,14 +1,33 @@
-# Harvard CS50 2018 Weekly Overview 
+# Harvard CS50 2018  
+[Link to edX](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/)  
 
-[Link to edX](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/)
+## Summary  
 
-## Week 0: Scratch
+
+  - [x] [Week 0](#week-0-scratch) - _Scratch_
+  - [x] [Week 1](#week-1-c) - _C_ 
+  - [x] [Week 2](#week-2-algorithms) - _Algorithms_
+  - [x] [Week 3](#week-3-memory) - _Memory_
+  - [ ] Week 4 - _Data Structures_ :hourglass_flowing_sand:
+  - [ ] Week 5 - _HTTP_
+  - [ ] Week 6 - _Dynamic Programming_
+  - [ ] Week 7 - _Phyton_
+  - [ ] Week 8 - _Phyton_
+  - [ ] Week 9 - _SQL_
+  - [ ] Week 10 - _JavaScript_
+  - [ ] Week 11 - _Final Project_ 
+  
+***
+
+## Harvard CS50 2018 Weekly Overview 
+
+### Week 0: Scratch
 Link to play the game that I created : 
 ```javascript
 https://scratch.mit.edu/projects/199032128/
 ```
 
-## Week 1: C
+### Week 1: C
 [**hello.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%201/hello.c) : a program that prints out a simple greeting to the user, per the below.
 ```javascript
 $ ./hello
@@ -44,9 +63,9 @@ plaintext:  Meet me at the park at eleven am
 ciphertext: Negh zf av huf pcfx bt gzrwep oz
 ```
 
-## Week 2: Algorithms  
+### Week 2: Algorithms  
 
-### [**bday.txt**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/bday.txt)  
+#### [**bday.txt**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/bday.txt)  
 In bday.txt, type the ASCII representation of Happy Birthday, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:
 
 ```javascript
@@ -57,7 +76,7 @@ D4@1/4
 G4@1/4
 F#4@1/2
 ```
-### [**helpers.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/helpers.c)  
+#### [**helpers.c**](https://github.com/jpacsai/HarvardX_CS50x/blob/master/Week%203/helpers.c)  
 In this file, there are three functions:
 
 **duration**  
@@ -73,4 +92,4 @@ and return as an int the note’s corresponding frequency, rounded to the neares
 which should return true if its input, a string, represents a rest in our machine-readable format, otherwise false.
 
 
-## Week 3: Memory
+### Week 3: Memory
