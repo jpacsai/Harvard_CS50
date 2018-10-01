@@ -7,8 +7,8 @@
 - [x] Assignment
 
 ### Module 2 - Internet
-- [ ] Lecture
-- [ ] Assignment
+- [x] Lecture
+- [x] Assignment
 
 ### Module 3 - Multimedia
 - [ ] Lecture
