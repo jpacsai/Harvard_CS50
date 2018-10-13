@@ -4,24 +4,18 @@
 
 ### Module 1 - Hardware
 - [x] Lecture
-- [x] Assignment
 
 ### Module 2 - Internet
 - [x] Lecture
-- [x] Assignment
 
 ### Module 3 - Multimedia
-- [ ] Lecture
-- [ ] Assignment
+- [x] Lecture
 
 ### Module 4 - Security
-- [ ] Lecture
-- [ ] Assignment
+- [x] Lecture
 
 ### Module 5 - Web Development
-- [ ] Lecture
-- [ ] Assignment
+- [x] Lecture
 
 ### Module 6 - Programming
 - [ ] Lecture
-- [ ] Assignment
