@@ -4,7 +4,7 @@
    - [coursework](https://github.com/jpacsai/Harvard_CS50/tree/master/cs50_UnderstandingTech)
    
 ### [Web Programming with Python and JavaScript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)
-   - [coursework](#)
+   - [coursework](https://github.com/jpacsai/Harvard_CS50/tree/master/WebProgramming/)
 
 ### [Introduction to Computer Science](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x)
    - [coursework](https://github.com/jpacsai/Harvard_CS50/tree/master/cs50)  
